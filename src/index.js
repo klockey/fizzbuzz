@@ -1,24 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-import App from './components/App'
-
-import './styles/screen.css'
-
-const root = document.getElementById('root')
-
-const render = (app) => {
-  ReactDOM.render(
-    <AppContainer>{app}</AppContainer>,
-    root
-  )
-}
-
-render(<App />)
-
-if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    const NextApp = require('./components/App').default
-    render(<NextApp />)
-  })
+for (let i = 1; i < 101; i++) {
+  if (i / 3) {
+    document.write('Fizz')
+  } else if (i / 5) {
+    document.write('Buzz')
+  } else if ((i / 3) && (i / 5)) {
+    document.write('FizzBuzz')
+  } else {
+    document.write(i)
+  }
 }
